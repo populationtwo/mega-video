@@ -1,0 +1,23 @@
+{
+  "name": "mega-video",
+  "version": "0.0.0",
+  "homepage": "https://github.com/populationtwo/mega-video",
+  "authors": [
+    "Edwin Lunandy <populationtwo@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18"
+  }
+}
