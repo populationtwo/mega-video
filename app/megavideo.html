@@ -1,4 +1,4 @@
-<video controls>
+<video width="{{video.width}}" height="{{video.height}}" ng-click="video.togglePlay()">
 	<source
 		ng-repeat="source in sources"
 		ng-src="{{source.src}}"

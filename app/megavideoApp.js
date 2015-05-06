@@ -5,6 +5,7 @@ angular.module( 'megaVideoDemo', [] )
 			templateUrl: 'megavideo.html',
 			scope      : true,
 			link       : function (scope, element, attrs) {
+				var videoPlayer = element.find('video')[0];
 				scope.sources = [];
 				function processSources() {
 					var sourceTypes = {
@@ -25,6 +26,26 @@ angular.module( 'megaVideoDemo', [] )
 				}
 
 				processSources();
+
+				scope.video = {
+					play: function(){
+						videoPlayer.play();
+						scope.video.status = 'play';
+					},
+					pause: function(){
+						videoPlayer.pause();
+						scope.video.status = 'pause';
+					},
+					stop: function(){
+
+					},
+					togglePlay: function(){
+						scope.video.status == 'play' ? this.pause() : this.play();
+					},
+					width: attrs.width,
+					height: attrs.height
+
+				}
 			}
 		}
 	} );
